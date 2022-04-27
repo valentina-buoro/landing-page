@@ -26,6 +26,7 @@ h1 {
     margin: 2em 1rem;
 }
 
+
 @media only screen and (min-width: 35em){
     h1 {
         font-size: 7em;
@@ -73,6 +74,8 @@ section {
 .navbar__menu li {
     display: inline-block;
 }
+
+
 
 .navbar__menu .menu__link {
     display: block;
@@ -220,4 +223,20 @@ section.your-active-class .landing__container::after {
 		           translate(-1em) 
 		           rotate(-360deg);
 	}
+}
+
+
+@media(max-width:600px){
+    .navbar__menu .menu__link {
+        
+        font-weight: bold;
+        text-decoration: none;
+        color: #000;
+    }
+    .navbar__menu ul {
+        padding:2%;
+        margin: 0;
+        text-align: center;
+    }
+    
 }

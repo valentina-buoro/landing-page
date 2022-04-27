@@ -1,3 +1,4 @@
+
 /**
  * 
  * Manipulating the DOM exercise.
@@ -18,20 +19,45 @@
  * Great to have comments before crucial code sections within the procedure.
 */
 
-/**
+/*
  * Define Global Variables
- * 
 */
 
+
+var section, menu, sectionArray, sectionLength;
+section = document.querySelectorAll('section')
+sectionArray = Array.from(section)
+sectionLength = sectionArray.length
+console.log(sectionLength)
+menu = document.querySelector('#navbar__list')
 
 /**
  * End Global Variables
  * Start Helper Functions
  * 
 */
+const Navigation = ()=>{
+    var list = ''
 
+    sectionArray.forEach((section)=>{
+        const sectionName = section.getAttribute('data-nav')
+        var sectionId = section.getAttribute('id')
+        //console.log( sectionName, sectionId)
 
+        let list = document.createElement('li')
+        list.innerHTML = `<a class = 'menu__link'href = "#${sectionId}">${sectionName}</a>`
+        //list +=`<li><a href = "#${sectionId}">${sectionName}</a></li>`
+        //menu.innerHTML = list
 
+        menu.appendChild(list)
+
+    })
+
+   
+
+}
+
+Navigation()
 /**
  * End Helper Functions
  * Begin Main Functions
