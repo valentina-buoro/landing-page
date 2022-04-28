@@ -15,7 +15,7 @@ The starter project has some HTML and CSS styling to display a static version of
 The code in this repository is meant to satisfy the project # 3 rubric of the Front Ent Web Developer nanodegree. Most of the code was written in the JavaScript file, with a few CSS codes. JavaScript was used to dynamically create the Navigation bar.
 
 
-To get started, open `js/app.js` and start building out the app's functionality
+To get started, open `js/app.js` 
 
 For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
 
