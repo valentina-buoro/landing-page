@@ -31,11 +31,10 @@ sectionLength = sectionArray.length
 console.log(sectionLength)
 menu = document.querySelector('#navbar__list')
 
-/**
- * End Global Variables
- * Start Helper Functions
- * 
-*/
+
+
+
+// build the nav
 const Navigation = ()=>{
     var list = ''
 
@@ -58,31 +57,42 @@ const Navigation = ()=>{
 }
 
 Navigation()
-/**
- * End Helper Functions
- * Begin Main Functions
- * 
-*/
-
-// build the nav
 
 
-// Add class 'active' to section when near top of viewport
 
 
-// Scroll to anchor ID using scrollTO event
+
+//to get the position of each section
+const sectionPosition = (section)=>{
+
+     return  Math.floor(section.getBoundingClientRect().top)
+    
+}
+
+//to remove the active class
+const isActive = (section)=>{
+    section.classList.remove('your-active-class')
+}
 
 
-/**
- * End Main Functions
- * Begin Events
- * 
-*/
+//to add active class
+const addActive = (condition, section)=>{
+    if(condition){
+        section.classList.add('your-active-class')
+    }
+}
 
-// Build menu 
+// Add class 'active' to section when the position is close to top of viewport
 
-// Scroll to section on link click
+const activation = ()=>{
+    section.forEach(section=>{
+        const elementPosition = sectionPosition (section)
 
-// Set sections as active
+        inviewport = ()=> elementPosition <150 && elementPosition >= -150
 
+        isActive(section)
+        addActive(inviewport(), section)
+    })
+}
 
+document.addEventListener('scroll', activation)
