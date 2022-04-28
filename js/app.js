@@ -95,4 +95,4 @@ const activation = ()=>{
     })
 }
 
-document.addEventListener('scroll', activation)
+window.addEventListener('scroll', activation)
