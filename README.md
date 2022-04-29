@@ -3,8 +3,8 @@
 ## Table of Contents
 
 * [Instructions](#instructions)
-* [General description of the project or content of the repository](#General description of this project)
-* [List of what software, firmware and hardware you may require](#List of software required)
+* [General description of this project](#General description of this project)
+* [List of software required](#List of software required)
 * [Installation instructions for the software and firmware.](#Installation instructions for the software)
 * [List of files included in the project.](#List of files in this project)
 * [Copyright and licensing information.](#copyright)
