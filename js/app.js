@@ -110,4 +110,3 @@ function myNavFunction(){
     var element = document.querySelector("nav");
     element.classList.add("mystyle");
 }
-
