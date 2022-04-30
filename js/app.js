@@ -24,7 +24,7 @@
 */
 
 
-var section, menu, sectionArray, sectionLength;
+let section, menu, sectionArray, sectionLength;
 section = document.querySelectorAll('section')
 sectionArray = Array.from(section)
 sectionLength = sectionArray.length
@@ -36,11 +36,11 @@ menu = document.querySelector('#navbar__list')
 
 // build the nav
 const Navigation = ()=>{
-    var list = ''
+    let list = ''
 
     sectionArray.forEach((section)=>{
         const sectionName = section.getAttribute('data-nav')
-        var sectionId = section.getAttribute('id')
+        let sectionId = section.getAttribute('id')
         //console.log( sectionName, sectionId)
 
         let list = document.createElement('li')
