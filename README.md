@@ -6,6 +6,7 @@
 * [Project Description](#projectdescriptions)
 * [Languages used](#languagesused)
 * [Resources used](#resourcesused)
+
 ## Udacity-Frontend-Nanodegree-Project-3[Landing-Page
 
 This repository is dedicated to the third project for Udacity frontend nanodegree. HTML and CSS starter code was provided by udacity
@@ -22,3 +23,4 @@ This project is t involves the use of Javascript to dynamically build a navigati
 https://www.w3schools.com/howto/howto_js_add_class.asp
 https://developer.mozilla.org
 https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
+
