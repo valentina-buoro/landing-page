@@ -10,9 +10,6 @@
 
 
 /* ---- Base Rules ---- */
-html{
-    scroll-behavior: smooth;
-}
 body {
     background: rgb(136,203,171);
     background: linear-gradient(0deg, rgba(136,203,171,1) 0%, rgba(0,13,60,1) 100%);
@@ -214,6 +211,28 @@ section.your-active-class .landing__container::after {
     animation: rotate 5s linear 0s infinite forwards reverse;
 }
 
+ .mystyle{
+    
+    background-color:#000;
+    
+}
+
+.mystyle .menu__link{
+    color:green;
+}
+
+.mystyle .menu__link:hover{
+    background:#fff;
+    color: #000;
+    transition: ease 0.3s all;
+}
+
+/*.navbar__menu .menu__link .myStyle:hover {
+    background:#fff;
+    color: #000;
+    transition: ease 0.3s all;
+}*/
+
 /* Section Active Styles Keyframe Animations */
 @keyframes rotate {
 	from {
@@ -237,9 +256,19 @@ section.your-active-class .landing__container::after {
         color: #000;
     }
     .navbar__menu ul {
-        padding:2%;
+        padding:0;
         margin: 0;
         text-align: center;
+    }
+
+    .mystyle .menu__link{
+        color:green;
+    }
+    
+    .mystyle .menu__link:hover{
+        background:#fff;
+        color: #000;
+        transition: ease 0.3s all;
     }
     
 }

@@ -72,6 +72,7 @@ const sectionPosition = (section)=>{
 //to remove the active class
 const isActive = (section)=>{
     section.classList.remove('your-active-class')
+    
 }
 
 
@@ -79,6 +80,7 @@ const isActive = (section)=>{
 const addActive = (condition, section)=>{
     if(condition){
         section.classList.add('your-active-class')
+        
     }
 }
 
@@ -93,6 +95,19 @@ const activation = ()=>{
         isActive(section)
         addActive(inviewport(), section)
     })
+
+
+
+    
 }
 
 window.addEventListener('scroll', activation)
+
+
+// add classlist to naviagtion as per review
+document.querySelector("nav").onclick = function() {myNavFunction()};
+function myNavFunction(){
+    var element = document.querySelector("nav");
+    element.classList.add("mystyle");
+}
+

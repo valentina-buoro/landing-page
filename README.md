@@ -2,12 +2,23 @@
 
 ## Table of Contents
 
-* [Instructions](#instructions)
+* [Udacity-Frontend-Nanodegree-Project-3[Landing-Page]](#Udacity-Frontend-Nanodegree-Project-3[Landing-Page])
+* [Project Description](#projectdescriptions)
+* [Languages used](#languagesused)
+* [Resources used](#resourcesused)
+## Udacity-Frontend-Nanodegree-Project-3[Landing-Page
 
-## Instructions
+This repository is dedicated to the third project for Udacity frontend nanodegree. HTML and CSS starter code was provided by udacity
 
-The starter project has some HTML and CSS styling to display a static version of the Landing Page project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+## Project Description
+This project is t involves the use of Javascript to dynamically build a navigation that allows us access to different sections of the page from the menu list. Active states are also applied to the sections,  links and navigation.The CSS was also slightly modified to include the active states for the links and navigation
 
-To get started, open `js/app.js` and start building out the app's functionality
+## Languages used
+1)HTML
+2)CSS
+3)JavaScript
 
-For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
+## Resources used
+https://www.w3schools.com/howto/howto_js_add_class.asp
+https://developer.mozilla.org
+https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
