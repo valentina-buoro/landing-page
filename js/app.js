@@ -110,3 +110,16 @@ function myNavFunction(){
     var element = document.querySelector("nav");
     element.classList.add("mystyle");
 }
+
+
+const scrolling = ()=>{
+    const links = document.querySelectorAll('a')
+    links.forEach(link=>{
+        link.addEventListener('click',(event)=>{
+            event.preventDefault()
+            for(let section of sectionArray)
+            //const element = document.getElementById("content");
+            section.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+        })
+    })
+}
