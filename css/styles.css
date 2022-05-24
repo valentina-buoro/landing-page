@@ -221,6 +221,10 @@ nav .navbar__menu .menu__link .mystyle{
     background-color: #666;
     color: white;
   }
+.active .menu__link  {
+    background-color: #666;
+    color: white;
+  }
 .your-active-class .menu__link{
     color:red;
 }

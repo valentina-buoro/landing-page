@@ -4,27 +4,18 @@ let sections, menu, sectionArray, sectionLength;
 sections = document.querySelectorAll('section')
 sectionArray = Array.from(sections)
 sectionLength = sectionArray.length
-console.log(sectionLength)
 menu = document.querySelector('#navbar__list')
 
 // build the nav
 const Navigation = () => {
     let list = ''
-
     sectionArray.forEach((section) => {
         const sectionName = section.getAttribute('data-nav')
         var sectionId = section.getAttribute('id')
-        //console.log( sectionName, sectionId)
         let list = document.createElement('li')
-        list.innerHTML = `<a class = 'menu__link ${sectionId}'href = "#${sectionId}">${sectionName}</a>`
-        //list +=`<li><a href = "#${sectionId}">${sectionName}</a></li>`
-        //menu.innerHTML = list
-
+        list.innerHTML = `<a class = 'menu__link 'href = "#${sectionId}">${sectionName}</a>`
         menu.appendChild(list)
     })
-
-
-
 }
 
 Navigation()
@@ -61,6 +52,7 @@ const activation = () => {
         isActive(section)
         addActive(inviewport(), section)
         current = section.getAttribute('id')
+        return current
     })
     
     const listArray = Array.from(lists)
@@ -69,37 +61,16 @@ const activation = () => {
         list.addEventListener('click', function myNavFunction(){
             return list.classList.add('active') 
         })
-        /*list.onclick = function myNavFunction(){
-             return list.classList.add('active') 
-         }*/
+         
     }) 
+    const targetSection = current
 
+   // add smooth scrolling feature
+    targetSection.scrollIntoView({
+        behavior: "smooth",
+        block: "end",
+        inline: "nearest",
+    });
 }
 
 window.addEventListener('scroll', activation)
-
-
-// add classlist to naviagtion as per review
-/*document.querySelector("li").onclick = //function() {myNavFunction()};
-function myNavFunction(){
-    var element = document.querySelector("li");
-    element.classList.add("active");
-}*/
-
-const listActive = (list) => {
-    list.classList.remove('active')
-
-}
-//to add active class
-
-//const lists = document.querySelectorAll('li')
-/*const listArray = Array.from(lists)
-listArray.forEach(list => { 
-    list.addEventListener('click', function myNavFunction(){
-        return list.classList.add('active') 
-    })
-    /*list.onclick = function myNavFunction(){
-         return list.classList.add('active') 
-     }
-})*/
-
