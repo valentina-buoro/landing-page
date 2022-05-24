@@ -4,18 +4,27 @@ let sections, menu, sectionArray, sectionLength;
 sections = document.querySelectorAll('section')
 sectionArray = Array.from(sections)
 sectionLength = sectionArray.length
+console.log(sectionLength)
 menu = document.querySelector('#navbar__list')
 
 // build the nav
 const Navigation = () => {
     let list = ''
+
     sectionArray.forEach((section) => {
         const sectionName = section.getAttribute('data-nav')
         var sectionId = section.getAttribute('id')
+        //console.log( sectionName, sectionId)
         let list = document.createElement('li')
-        list.innerHTML = `<a class = 'menu__link 'href = "#${sectionId}">${sectionName}</a>`
+        list.innerHTML = `<a class = 'menu__link ${sectionId}'href = "#${sectionId}">${sectionName}</a>`
+        //list +=`<li><a href = "#${sectionId}">${sectionName}</a></li>`
+        //menu.innerHTML = list
+
         menu.appendChild(list)
     })
+
+
+
 }
 
 Navigation()
@@ -52,7 +61,6 @@ const activation = () => {
         isActive(section)
         addActive(inviewport(), section)
         current = section.getAttribute('id')
-        return current
     })
     
     const listArray = Array.from(lists)
@@ -61,16 +69,13 @@ const activation = () => {
         list.addEventListener('click', function myNavFunction(){
             return list.classList.add('active') 
         })
-         
-    }) 
-    const targetSection = current
+        
+    })
 
-   // add smooth scrolling feature
-    targetSection.scrollIntoView({
-        behavior: "smooth",
-        block: "end",
-        inline: "nearest",
-    });
 }
 
+
 window.addEventListener('scroll', activation)
+
+
+
