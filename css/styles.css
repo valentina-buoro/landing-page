@@ -211,27 +211,31 @@ section.your-active-class .landing__container::after {
     animation: rotate 5s linear 0s infinite forwards reverse;
 }
 
- .mystyle{
+
+nav .navbar__menu .menu__link .mystyle{
     
     background-color:#000;
     
 }
+.active  {
+    background-color: #666;
+    color: white;
+  }
+.your-active-class .menu__link{
+    color:red;
+}
 
-.mystyle .menu__link{
+.your-active-class .menu__link:hover{
+    background:#fff;
     color:green;
+    
 }
 
-.mystyle .menu__link:hover{
+.navbar__menu .menu__link .myStyle:hover {
     background:#fff;
     color: #000;
     transition: ease 0.3s all;
 }
-
-/*.navbar__menu .menu__link .myStyle:hover {
-    background:#fff;
-    color: #000;
-    transition: ease 0.3s all;
-}*/
 
 /* Section Active Styles Keyframe Animations */
 @keyframes rotate {
@@ -261,14 +265,28 @@ section.your-active-class .landing__container::after {
         text-align: center;
     }
 
-    .mystyle .menu__link{
+    /*.mystyle .menu__link{
         color:green;
     }
     
-    .mystyle .menu__link:hover{
+    .mystyle .menu__link:clicked{
+        background:#fff;
+        color: #000;
+        transition: ease 0.3s all;
+    }*/
+    .your-active-class .menu__link{
+        color:red;
+    }
+    
+    .your-active-class .menu__link:hover{
+        background:#fff;
+        color:green;
+        
+    }
+    
+    .navbar__menu .menu__link .myStyle:hover {
         background:#fff;
         color: #000;
         transition: ease 0.3s all;
     }
-    
 }
