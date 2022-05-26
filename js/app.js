@@ -15,8 +15,8 @@ const Navigation = () => {
         const sectionName = section.getAttribute('data-nav')
         var sectionId = section.getAttribute('id')
         //console.log( sectionName, sectionId)
-        let list = document.createElement('li')
-        list.innerHTML = `<a class = 'menu__link ${sectionId}'href = "#${sectionId}">${sectionName}</a>`
+        list = document.createElement('li')
+        list.innerHTML = `<a class ='menu__link ${sectionId}' href ="#${sectionId}">${sectionName}</a>`
         //list +=`<li><a href = "#${sectionId}">${sectionName}</a></li>`
         //menu.innerHTML = list
 
@@ -50,7 +50,7 @@ const addActive = (condition, section) => {
 }
 
 
-const lists = document.querySelectorAll('li')
+
 // Add class 'active' to section when the position is close to top of viewport
 const activation = () => {
     let current = ''
@@ -62,20 +62,53 @@ const activation = () => {
         addActive(inviewport(), section)
         current = section.getAttribute('id')
     })
-    
-    const listArray = Array.from(lists)
-    listArray.forEach(list => { 
-        list.classList.remove('active')
-        list.addEventListener('click', function myNavFunction(){
-            return list.classList.add('active') 
-        })
+
+    /*const listArray = Array.from(lists)
+    let still = ''
+    listArray.forEach(list => {
+            
+            list.classList.remove('active') 
+
+            window.addEventListener('load', (event)=>{
+                //event.preventDefault()
+                list.addEventListener('click', function myNavFunction(){
+                return list.classList.add('active') 
+            })
+            
+            //list.addEventListener('click', function myNavFunction(){
+            //return list.classList.add('active') 
+       })
         
-    })
+    })*/
+
 
 }
+const lists = document.querySelectorAll('a')
+console.log(lists)
+window.addEventListener('load', 
+    () => {
+        lists.forEach(list => {
+
+          
+            list.addEventListener('click', function myNavFunction(e) {
+                lists.forEach(tina=>{
+                    tina.classList.remove('active')
+
+                })
+                
+                return e.target.classList.add('active')
+            })
+
+        })
+    }
+
+
+)
+
 
 
 window.addEventListener('scroll', activation)
+
 
 
 

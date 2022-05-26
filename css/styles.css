@@ -221,10 +221,10 @@ nav .navbar__menu .menu__link .mystyle{
     background-color: #666;
     color: white;
   }
-.active .menu__link  {
+/*.active .menu__link  {
     background-color: #666;
     color: white;
-  }
+  }*/
 .your-active-class .menu__link{
     color:red;
 }
@@ -235,11 +235,7 @@ nav .navbar__menu .menu__link .mystyle{
     
 }
 
-.navbar__menu .menu__link .myStyle:hover {
-    background:#fff;
-    color: #000;
-    transition: ease 0.3s all;
-}
+
 
 /* Section Active Styles Keyframe Animations */
 @keyframes rotate {
