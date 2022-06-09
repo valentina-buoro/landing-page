@@ -41,6 +41,7 @@ const isActive = (section) => {
 const addActive = (condition, section) => {
     if (condition) {
         section.classList.add('your-active-class')
+        console.log(section.getAttribute('id'))
     }
 }
 
@@ -48,20 +49,22 @@ const lists = document.querySelectorAll('nav ul li')
 
 // Add class 'active' to section when the position is close to top of viewport
 const activate = () => {
-    let current = ''
-    let sectionName = ''
+    //let current = ''
+    //let sectionName = ''
     sections.forEach(section => {
         const elementPosition = sectionPosition(section)
         //console.log(elementPosition)
-        inviewport = () => { elementPosition < 150 && elementPosition >= -150}
+        inviewport = () =>  elementPosition < 150 && elementPosition >= -150
         isActive(section)
-        addActive(inviewport, section)
+        addActive(inviewport(), section)
         current = section.getAttribute('id')
+        //return current
     })
+    //console.log(current)
     let curren = ''
     sections.forEach(section=>{
         const sectionTop = section.offsetTop
-        console.log(sectionTop)
+        //console.log(sectionTop)
         const sectionHeight = section.clientHeight;
         if(scrollY >= sectionTop){
             curren = section.getAttribute('id')
